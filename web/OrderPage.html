@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<!--==================================================================
+//
+// Web site: Door Crash
+// Web page: Order Page
+// Course:   CSC 5750
+// Homework: 1
+// Author:   Eythan Fellous
+// Date:     09/19/2019
+// Description:
+//   <brief description of web site and web page including its inputs,
+// processing, and outputs>
+// 
+//=================================================================-->
+
+<head>
+  
+	<title>Order</title>
+	<meta charset="UTF-8">
+  <meta name="author" content="Eythan Fellous"/>
+  <meta name="description" content="Homework 1"/>
+  <meta http-equiv="Expires" content="-1">
+  <link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript">
+
+		//==================================================
+		// SomeFunction
+		//==================================================
+		function SomeFunction()
+		{
+		}
+
+    function populate(s1,s2){
+	var s1 = document.getElementById(s1);
+	var s2 = document.getElementById(s2);
+	s2.innerHTML = "";
+
+	if (s1.value == "Dunkin Donut's"){
+		var optionArray = ["|","|10 Cream Donuts : 45 left", "|Cafe gourmant : 2 left", "|Complete Breakfast : 6 left", "|Mini Hamburger : 43 left"];
+	} else if (s1.value == "Culver's"){
+		var optionArray = ["|","|Atlantic Cod Sandwich : 4 left","|French Fries : Unlimited left", "|Hamburger : 9 left", "|Double Cheese Burger : 3 left"];
+	} else if (s1.value == "McDonald's"){
+		var optionArray = ["|","|Menu Maxi Best of Big Mac : 4 left","|Filet O Fish : 10 left", "|Big Tasty : 14 left", "|Mc Flurry : 45 left"];
+	}
+    else if (s1.value == "Shield's Pizza") {
+        var optionArray = ["|", "large|Large Pizza : 10 left", "|Onion Bread : 3 left", "|Medium Meat Pizza : 5 left", "|Beverages : Unlimited left"];
+    }
+	for(var option in optionArray){
+		var pair = optionArray[option].split("|");
+		var newOption = document.createElement("option");
+		newOption.value = pair[1];
+		newOption.innerHTML = pair[1];
+		s2.options.add(newOption);
+	}
+}
+		
+	</script>
+  
+</head>
+ 
+<body>
+    <h1>Order Page</h1>
+  <!-- Header Tab -->
+  <div class="NavigationTab">
+        <ul class="navbar">
+        <li class="inlineDisplay"><a href="MainPage.html">Main Page</a></li>
+        <li class="inlineDisplay"><a href="RestaurantPage.html">Restaurant</a></li>
+        <li class="inlineDisplay"><a href="OrderPage.html">Order</a></li>
+        </ul>
+    </div>
+    <!--Content Form-->
+    <form action="http://www.tipjar.com/cgi-bin/test" method="GET">
+        First name:<br>
+        <input type="text" name="firstname">
+        <br>
+        Last Name:<br>
+        <input type="text" name="lastname">
+        <br>
+        Address:<br>
+        <input type="text" name="address">
+        <br>
+        Phone:<br>
+        <input type="number" name="phone">
+        <br>
+        Restaurant:<br>
+        <select id="restaurant"  name="restaurant" size="1" onchange="populate(this.id, 'items')">
+            <option value=""> </option>
+            <option value="Dunkin Donut's">Dunkin Donut's</option>
+            <option value="Culver's">Culver's</option>
+            <option value="McDonald's">McDonald's</option>
+            <option value="Shield's Pizza">Shield's Pizza</option>
+        </select>
+        <br>
+        Restaurant Item:<br>
+        <select id="items" name="items" size="1"></select>
+        <br>
+        <input type="submit" value="Order">
+    </form>
+    <!--Footer -->
+	<h2>Contact</h2>
+	<footer>
+		<p>655 W Kirby St : +1 313 456 4323</p>
+		<p>&copy; 2019 Eythan Fellous : Door Crash</p>
+	</footer>
+</body>
+ 
+</html>

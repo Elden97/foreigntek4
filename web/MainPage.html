@@ -23,6 +23,9 @@
   <meta name="description" content="Homework 1"/>
   <meta http-equiv="Expires" content="-1">
   <link rel="stylesheet" type="text/css" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 	<script type="text/javascript">
 
 		//==================================================
@@ -41,11 +44,17 @@
 	<h1>Door Crash</h1>
   <!-- Header Tab -->
   <div>
-	  <ul class="navbar">
-	  <li class="inlineDisplay"><a href="MainPage.html">Main Page</a></li>
-	  <li class="inlineDisplay"><a href="RestaurantPage.html">Restaurant</a></li>
-	  <li class="inlineDisplay"><a href="OrderPage.html">Order</a></li>
-	  </ul>
+  <nav class="level">
+	<p class="level-item has-text-centered">
+	  <a class="link is-info"><a href="MainPage.html">Main Page</a></a>
+	</p>
+	<p class="level-item has-text-centered">
+	  <a class="link is-info"><a href="RestaurantPage.html">Restaurant</a></a>
+	</p>
+	<p class="level-item has-text-centered">
+	  <a class="link is-info"><a href="OrderPage.html">Order</a></a>
+	</p>
+  </nav>
   </div>
 
   <!--Main Content-->
@@ -108,11 +117,14 @@
 	</div>
 
 	<!--Footer -->
-	<h2>Contact</h2>
-	<footer>
-		<p>655 W Kirby St : +1 313 456 4323</p>
-		<p>&copy; 2019 Eythan Fellous : Door Crash</p>
-	</footer>
+	<footer class="footer">
+		<div class="content has-text-centered">
+		  <p>
+			<strong>Door Crash</strong> by Eythan Fellous</a>. The source code is licensed
+			<a href="http://opensource.org/licenses/mit-license.php">MIT</a>. 655 W Kirby St : +1 313 465 4323.
+		  </p>
+		</div>
+	  </footer>
 </body>
  
 </html> 
